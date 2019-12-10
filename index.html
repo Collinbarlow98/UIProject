@@ -1,5 +1,42 @@
 <html>
 <head></head>
 <body>
+<header>Movie Reviews</header>
+<input type="text" id="movieTitleText" placeholder="Movie Title"/>
+<input type="text" id="movieReviewText" placeholder="Movie Review"/>
+<button id="submitReviewButton">Submit Review</button>
+<button id="toAccountPage" onClick="window.location='login.html'">Sign In or Register</button>
+<button id="signoutButton">Sign Out</button>
+<ul id="movieListUL"></ul>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDxQKZoPa4NSrADJ-ht8Y7sjS3gCXA_fdA",
+    authDomain: "reviewsite-6cab6.firebaseapp.com",
+    databaseURL: "https://reviewsite-6cab6.firebaseio.com",
+    projectId: "reviewsite-6cab6",
+    storageBucket: "reviewsite-6cab6.appspot.com",
+    messagingSenderId: "286118790550",
+    appId: "1:286118790550:web:b08bf381b16e23d72d89b7",
+    measurementId: "G-V8DY4T46KM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="app.js"></script>
 </body>
 </html>
