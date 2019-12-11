@@ -1,0 +1,56 @@
+<html>
+    <head></head>
+    <body>
+    <div id="register-form">
+      <h1>Register</h1>
+      <input type="text" id="register-email" />
+      <input type="password" id="register-password" />
+      <button id="registerButton">Register</button>
+    </div>
+
+    <h1>Login</h1>
+    <input type="text" id="login-email" />
+    <input type="password" id="login-password" />
+    <a href="index.html"><button id="loginButton">Login</button></a>
+
+    <button id="signoutButton">Signout</button>
+
+    <input type="text" id="movieTitle"></input>
+    <input type="text" id="movieReview"></input>
+    <button id="submitButton">submit</button>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+
+<!--AUTH-->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAT5Jngrgv14mrgZIKlmIDpA8fbrsA4m0Y",
+    authDomain: "ui-project-285a6.firebaseapp.com",
+    databaseURL: "https://ui-project-285a6.firebaseio.com",
+    projectId: "ui-project-285a6",
+    storageBucket: "ui-project-285a6.appspot.com",
+    messagingSenderId: "997990570893",
+    appId: "1:997990570893:web:76d3b2c33596018eddbbc4",
+    measurementId: "G-MPCY9YWY9S"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // make auth and firestore services
+
+  const auth = firebase.auth();
+
+  const db = firebase.firestore();
+
+</script>
+</body>
+<script src="register.js"></script>
+</html>
