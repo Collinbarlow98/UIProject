@@ -1,8 +1,8 @@
 // listen for auth status change
-//var userNow;
+var userNow;
 auth.onAuthStateChanged(user =>{
   console.log(user)
-  //userNow = user.email
+  userNow = user.email
 })
 
 //create
@@ -68,4 +68,4 @@ loginForm.addEventListener('click', (e) => {
   auth.signInWithEmailAndPassword(email,password).then(cred =>{
     console.log(cred.user.email)
   })
-}) 
+})

@@ -7,8 +7,8 @@ console.log(json)
 let results = json.results
 let nowplaying = results.map((result) => {
   console.log(result)
-  return `<div><img src="https://image.tmdb.org/t/p/w500/${result.poster_path}"style="height: 250; width: 200"/> <li>${result.title}</li>
-  <li>${result.vote_average}</li></div>`
+  return `<div style="display: flex"><img src="https://image.tmdb.org/t/p/w500/${result.poster_path}"style="height: 250; width: 200"/>${result.title}
+  ${result.vote_average}</div>`
 })
 moviesUL.innerHTML = nowplaying.join('')
 })
