@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Hello, world!</title>
+    <title>Home Page</title>
   </head>
   <body>
     <!--NAV BAR-->
@@ -17,22 +17,28 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Sign in <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="login.html">Sign in <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Now In Theathers</a>
+              <a class="nav-link" href="nowintheaters.html">Now In Theaters</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Best Of The Year</a>
-              </li>   <li class="nav-item">
-                <a class="nav-link" href="#">Best Of The Decade</a>
-              </li>   <li class="nav-item">
-                <a class="nav-link" href="#">Top Charts</a>
-              </li>
+                <a class="nav-link" href="bestoftheyear.html">Best Of The Year</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="upcomingmovies.html">Upcoming Movies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="topcharts.html">Top Charts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="reviews.html">Reviews</a>
+            </li>
+
           </ul>
         </div>
       </nav>
@@ -62,12 +68,12 @@
       <!--CAROUSEL-->
 
  <div class="contain">
- 
+
   <h1>Featured</h1>
 
   <div class="row">
     <div class="row__inner">
- 
+
       <div class="tile">
         <div class="tile__media">
           <img class="tile__img" src="timages/img.png" alt="">
@@ -78,7 +84,7 @@
           </div>
         </div>
       </div>
- 
+
       <div class="tile">
         <div class="tile__media">
           <img class="tile__img" src="timages/frozen.jpg" alt="">
@@ -89,7 +95,7 @@
           </div>
         </div>
       </div>
- 
+
       <div class="tile">
         <div class="tile__media">
           <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-3.jpg" alt="">
@@ -100,7 +106,7 @@
           </div>
         </div>
       </div>
- 
+
       <div class="tile">
         <div class="tile__media">
           <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-4.jpg" alt="">
@@ -111,7 +117,7 @@
           </div>
         </div>
       </div>
- 
+
       <div class="tile">
         <div class="tile__media">
           <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-5.jpg" alt="">
@@ -122,7 +128,7 @@
           </div>
         </div>
       </div>
- 
+
       <div class="tile">
         <div class="tile__media">
           <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-6.jpg" alt="">
@@ -148,7 +154,7 @@
 
  <!--MOVIE SUGGESTIONS-->
 
- 
+
 
 
     <!-- Optional JavaScript -->
@@ -156,5 +162,34 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDxQKZoPa4NSrADJ-ht8Y7sjS3gCXA_fdA",
+        authDomain: "reviewsite-6cab6.firebaseapp.com",
+        databaseURL: "https://reviewsite-6cab6.firebaseio.com",
+        projectId: "reviewsite-6cab6",
+        storageBucket: "reviewsite-6cab6.appspot.com",
+        messagingSenderId: "286118790550",
+        appId: "1:286118790550:web:b08bf381b16e23d72d89b7",
+        measurementId: "G-V8DY4T46KM"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="app.js">
   </body>
 </html>
