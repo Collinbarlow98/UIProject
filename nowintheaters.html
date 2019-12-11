@@ -1,7 +1,124 @@
 <html>
-<head></head>
+<head>    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Now In Theaters</title>
+
+  </head>
+    <!--NAV BAR-->
+    <nav class="navbar navbar-expand-lg">
+
+        <a class="navbar-brand" href="index.html" id="brand">M</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Sign Up <span class="sr-only" ></span></a>
+
+              <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Sign Up</h4>
+                      </div>
+                      <div class="modal-body">
+                          <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                              </div>
+                              <input type="text" id="register-email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input type="password" id="register-password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" id="registerButton" class="btn btn-deafult" id="register-Button" data-dismiss="modal">Sign Up</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+            </li>
+
+            <li class="nav-item">
+
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#mySecondModal">Log In <span class="sr-only" ></span></a>
+
+                <div id="mySecondModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Log In</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input type="text" id="login-email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                          </div>
+                          <input type="password" id="login-password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="loginButton" class="btn btn-deafult" id="register-Button" data-dismiss="modal">Log In</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          </li>
+
+            <li class="nav-item">
+
+              <a class="nav-link" href="upcomingmovies.html">Upcoming Movies</a>
+
+              </li>   <li class="nav-item">
+
+                <a class="nav-link" href="nowintheaters.html">Now In Theaters</a>
+
+              </li>   <li class="nav-item">
+
+                <a class="nav-link" href="topcharts.html">Top Charts</a>
+
+            </li>     <li class="nav-item">
+
+                <a class="nav-link" href="reviews.html">Reviews</a>
+
+              </li>
+
+          </ul>
+
+        </div>
+
+      </nav>
 <body>
-  <ul id="moviesUL"></ul>
+  <ul id="moviesUL" style="color: white"></ul>
   <script src="nowintheaters.js"></script>
+  <script src="register.js"></script>
 </body>
 </html>

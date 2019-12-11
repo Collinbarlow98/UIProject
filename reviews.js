@@ -22,7 +22,7 @@ moviesearch.addEventListener('click', () => {
             if(reviewArray != 0) {
               let reviews = reviewArray.map((review) => {
                 return `<li>${review.content}</li>`
-              })
+              })              
               let reviewsGrouped = reviews.join('')
               let group = `<div><img src="https://image.tmdb.org/t/p/w500/${result.poster_path}"style="height: 250; width: 200"/><li>${result.title}</li>${reviewsGrouped}`
               moviesUL.innerHTML += group
