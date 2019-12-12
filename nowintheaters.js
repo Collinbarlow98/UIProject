@@ -6,12 +6,31 @@ fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=ddcb97784f13102b72
     let results = json.results
     let nowplaying = results.map((result) => {
       let poster = result.poster_path
-      return `<a href="reviews.html#${result.title}" style="display: flex; flex-direction: column; margin: 20; align-items: center;">
-      <img src="https://image.tmdb.org/t/p/w500/${result.poster_path}" style="height: 250; width: 200; margin: 24;"/>
-      <div style="text-align: center; max-width: 200;">
-      <li style="list-style-type: none;">${result.title}</li>
-      </div>
-      </a>`
+      return `<a class="tile" href="reviews.html#${result.title}">
+                <div class="tile__media">
+                  <img class="tile__img_nowplaying" src="https://image.tmdb.org/t/p/w500/${result.poster_path}" alt="No Image" onerror="this.src='timages/noImage.jpg'">
+                </div>
+                <div class="tile__details">
+                  <div class="tile__title">
+                  ${result.title}
+                  </div>
+                </div>
+              </a>`
     })
-    moviesUL.innerHTML += nowplaying.join('')
+    for(let index = 0; index < 5; index++) {
+      let movie = nowplaying[index]
+      zeroThroughFive.innerHTML += movie
+    }
+    for(let index = 5; index < 10; index++) {
+      let movie = nowplaying[index]
+      fiveThroughTen.innerHTML += movie
+    }
+    for(let index = 10; index < 15; index++) {
+      let movie = nowplaying[index]
+      tenThroughFifteen.innerHTML += movie
+    }
+    for(let index = 15; index < 20; index++) {
+      let movie = nowplaying[index]
+      fifteenThroughTwenty.innerHTML += movie
+    }
   })
