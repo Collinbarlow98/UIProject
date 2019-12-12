@@ -14,82 +14,13 @@
 
         <a class="navbar-brand" href="index.html" id="brand">M</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: white;">
+          Menu<span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
           <ul class="navbar-nav mr-auto">
-
-            <li class="nav-item active">
-
-              <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Sign Up <span class="sr-only" ></span></a>
-
-              <div id="myModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Sign Up</h4>
-                      </div>
-                      <div class="modal-body">
-                          <div class="input-group mb-3">
-                              <div class="input-group-prepend">
-                              </div>
-                              <input type="text" id="register-email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                </div>
-                                <input type="password" id="register-password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
-                              </div>
-
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" id="registerButton" class="btn btn-deafult" id="register-Button" data-dismiss="modal">Sign Up</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-            </li>
-
-            <li class="nav-item">
-
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#mySecondModal">Log In <span class="sr-only" ></span></a>
-
-                <div id="mySecondModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">Log In</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                        </div>
-                        <input type="text" id="login-email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                      </div>
-                      <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                          </div>
-                          <input type="password" id="login-password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-
-                </div>
-                <div class="modal-footer">
-                  <button type="button" id="loginButton" class="btn btn-deafult" id="register-Button" data-dismiss="modal">Log In</button>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-
-            </div>
-          </div>
 
           </li>
 
@@ -109,16 +40,94 @@
 
                 <a class="nav-link" href="reviews.html">Reviews</a>
 
-              </li>
-
           </ul>
 
         </div>
 
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="nv">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active logout">
+
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Sign Up <span class="sr-only" ></span></a>
+
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">Sign Up</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    </div>
+                                    <input type="text" id="register-email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                  </div>
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                      </div>
+                                      <input type="password" id="register-password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" id="registerButton" class="btn btn-deafult" id="register-Button" data-dismiss="modal">Sign Up</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                  </li>
+
+                  <li class="nav-item active logout">
+
+                      <a class="nav-link" href="#" data-toggle="modal" data-target="#mySecondModal">Log In <span class="sr-only" ></span></a>
+
+                      <div id="mySecondModal" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+
+                      <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Log In</h4>
+                      </div>
+                      <div class="modal-body">
+                          <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                              </div>
+                              <input type="text" id="login-email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input type="password" id="login-password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" id="loginButton" class="btn btn-deafult" id="register-Button" data-dismiss="modal">Log In</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </li>   <li class="nav-item login">
+                <a class="nav-link" href="#" id="signoutButton">log out</a>
+            </li>
+
+            </ul>
+        </div>
+
       </nav>
 <body>
-  <input id="movieid" type="text" placeholder="Enter Movie" style="margin: 0 10">
-  <button id="moviesearch">Search</button>
+<div class="form-group mx-sm-3 mb-2" style="display: flex;">
+  <input type="text" class="form-control" id="movieid" placeholder="Enter Movie" style="max-width: 200; margin: 0 10;">
+  <button id="movieSearch"type="submit" class="btn btn-primary mb-2">Search</button>
+</div>
   <br></br>
   <ul id="moviesUL" style="color: white"></ul>
 

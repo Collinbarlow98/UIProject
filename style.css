@@ -9,7 +9,12 @@ body{
 
 .navbar{
     background-color: #000000;
+    margin: 0px;
     padding: 0px;
+}
+
+#nv{
+  width: 0%!important;
 }
 #brand{
     color: rgb(255, 0, 0);
@@ -87,7 +92,7 @@ li{
     transition: 450ms transform, 450ms -webkit-transform;
     font-size: 0;
     white-space: nowrap;
-    margin: 70.3125px 0;
+    margin: 70.3125px 80px;
     padding-bottom: 10px;
   }
   .tile {

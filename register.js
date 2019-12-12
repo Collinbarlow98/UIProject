@@ -1,7 +1,13 @@
 // listen for auth status change
 var userNow;
 auth.onAuthStateChanged(user =>{
-  console.log(user)
+  if (user) {
+    console.log('user logged in', user)
+    setupUI(user);
+  }  else{
+    setupUI();
+    console.log('user logged out')
+  }
   userNow = user.email
 })
 
@@ -14,10 +20,9 @@ let submitButton = document.getElementById("submitButton")
 
   //e.preventDefault()
 
-  //db.collection('reviews').add({
+  //db.collection('').add({
     //title: movieTitle.value,
-    //review: movieReview.value,
-    //username: userNow
+    //review: movieReview.value
   //})
 //})
 // register
@@ -46,12 +51,12 @@ registerForm.addEventListener('click', (e) => {
 })
 
 //sign out user
-//logoutButton.addEventListener('click' , (e) =>{
-  //e.preventDefault();
-  //auth.signOut().then(() =>{
-    //console.log('user signed out')
-  //})
-//})
+logoutButton.addEventListener('click' , (e) =>{
+  e.preventDefault();
+  auth.signOut().then(() =>{
+
+  })
+})
 
 //log in user
 
@@ -68,4 +73,20 @@ loginForm.addEventListener('click', (e) => {
   auth.signInWithEmailAndPassword(email,password).then(cred =>{
     console.log(cred.user.email)
   })
+})
+
+// ui identifier
+
+const loginLink = document.querySelectorAll(".login")
+const logoutlink = document.querySelectorAll(".logout")
+
+const setupUI = (user =>{
+  if (user){
+    loginLink.forEach(item => item.style.display = 'block')
+    logoutlink.forEach(item => item.style.display = 'none')
+  }   else{
+    loginLink.forEach(item => item.style.display = 'none')
+    logoutlink.forEach(item => item.style.display = 'block')
+  }
+
 })

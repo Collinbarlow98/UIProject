@@ -1,7 +1,7 @@
 
 let movieids = document.getElementById('movieid')
 
-moviesearch.addEventListener('click', () => {
+movieSearch.addEventListener('click', () => {
   let movieid = movieids.value
   moviesUL.innerHTML = ''
 
@@ -22,24 +22,39 @@ moviesearch.addEventListener('click', () => {
           .then(json => {
             let reviewArray = json.results
             let reviews = reviewArray.map((review) => {
-              return `${review.author}<li>${review.content}</li>`
+              return `<h5 class="mt-0">${review.author}</h5><p style="text-align: left; margin: 0; max-width: 100%;">${review.content}</p>`
             })
 
             let reviewsGrouped = reviews.join('')
-            let group = `<div id="${id}div" style="margin: 10 0"><img src="https://image.tmdb.org/t/p/w500/${result.poster_path}"style="height: 250; width: 200"/><li>${result.title}</li>${reviewsGrouped}</div>`
-            let submitReview = `Submit Review<input id='${id}' type="text" style="margin: 0 10"/><button onClick='addReview(${id}, "${title}")'>Submit</button>`
+            let group = `
+            <div class="media">
+            <img src="https://image.tmdb.org/t/p/w500/${result.poster_path}" class="align-self-auto mr-3" alt="noImage" onerror="this.src='timages/noImage.jpg'" style="hieght: 300; width: 200;"/>
+            <div class="media-body">
+            <h1 class="mt-0" style="padding-top: 10;">${result.title}</h1>
+            <p>${reviewsGrouped}</p>
+            <div id="${id}div">
+            </div>
+            </div>
+            </div>`
+            let submitReviews = `<div class="form-group mx-sm-3 mb-2" style="display: flex; align-items: baseline; margin: 10 0;">
+            <div style="width: 120;">Submit Review</div>
+            <input type="text" class="form-control" id='${id}' placeholder="Enter Review" style="margin: 0 10;">
+            <button id="movieSearch" onClick='addReview(${id}, "${title}")' type="submit" class="btn btn-primary mb-2">
+            Submit
+            </button>
+            </div>`
+
             db.collection(`${id}`).get()
               .then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                   let grab = document.getElementById(`${id}div`)
                   let review = doc.data();
-                  let reviewContent = `${review.username}<li>${review.review}</li>`
+                  let reviewContent = `<h5 class="mt-0">${review.username}</h5><p style="text-align: left; margin: 0; max-width: 100%;">${review.review}</p>`
                   grab.innerHTML += reviewContent
                 });
               })
-
             moviesUL.innerHTML += group
-            moviesUL.innerHTML += submitReview
+            moviesUL.innerHTML += submitReviews
         });
       })
     })
@@ -64,7 +79,7 @@ function linkedFromOtherPage() {
   let movieTitle = location.hash.substring(1);
   let movieid = movieTitle;
   moviesUL.innerHTML = ''
-
+if(movieid != '') {
   fetch(`https://api.themoviedb.org/3/search/movie?api_key=ddcb97784f13102b72af6aa3e89493b4&language=en-US&query=${movieid}&page=1&include_adult=true`)
     .then((response) => {
       return response.json()
@@ -82,26 +97,42 @@ function linkedFromOtherPage() {
           .then(json => {
             let reviewArray = json.results
             let reviews = reviewArray.map((review) => {
-              return `${review.author}<li>${review.content}</li>`
+              return `<h5 class="mt-0">${review.author}</h5><p style="text-align: left; margin: 0; max-width: 100%;">${review.content}</p>`
             })
 
             let reviewsGrouped = reviews.join('')
-            let group = `<div id="${id}div" style="margin: 10 0"><img src="https://image.tmdb.org/t/p/w500/${result.poster_path}"style="height: 250; width: 200"/><li>${result.title}</li>${reviewsGrouped}</div>`
-            let submitReview = `Submit Review<input id='${id}' type="text" style="margin: 0 10"/><button onClick='addReview(${id}, "${title}")'>Submit</button>`
+            let group = `
+            <div class="media">
+            <img src="https://image.tmdb.org/t/p/w500/${result.poster_path}" class="align-self-auto mr-3" alt="noImage" onerror="this.src='timages/noImage.jpg'" style="hieght: 300; width: 200;"/>
+            <div class="media-body">
+            <h1 class="mt-0" style="padding-top: 10;">${result.title}</h1>
+            <p>${reviewsGrouped}</p>
+            <div id="${id}div">
+            </div>
+            </div>
+            </div>`
+            let submitReviews = `<div class="form-group mx-sm-3 mb-2" style="display: flex; align-items: baseline; margin: 10 0;">
+            <div style="width: 120;">Submit Review</div>
+            <input type="text" class="form-control" id='${id}' placeholder="Enter Review" style="margin: 0 10;">
+            <button id="movieSearch" onClick='addReview(${id}, "${title}")' type="submit" class="btn btn-primary mb-2">
+            Submit
+            </button>
+            </div>`
+
             db.collection(`${id}`).get()
               .then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                   let grab = document.getElementById(`${id}div`)
                   let review = doc.data();
-                  let reviewContent = `${review.username}<li>${review.review}</li>`
+                  let reviewContent = `<h5 class="mt-0">${review.username}</h5><p style="text-align: left; margin: 0; max-width: 100%;">${review.review}</p>`
                   grab.innerHTML += reviewContent
                 });
               })
-
             moviesUL.innerHTML += group
-            moviesUL.innerHTML += submitReview
+            moviesUL.innerHTML += submitReviews
         });
       })
     })
+}
 }
 linkedFromOtherPage()
