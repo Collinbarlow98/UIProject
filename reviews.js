@@ -22,7 +22,7 @@ movieSearch.addEventListener('click', () => {
           .then(json => {
             let reviewArray = json.results
             let reviews = reviewArray.map((review) => {
-              return `<h5 class="mt-0">${review.author}</h5><p style="text-align: left; margin: 0; max-width: 100%;">${review.content}</p>`
+              return `<h5 class="mt-0">${review.author}</h5><p class="reviewText">${review.content}</p>`
             })
 
             let reviewsGrouped = reviews.join('')
@@ -49,7 +49,7 @@ movieSearch.addEventListener('click', () => {
                 querySnapshot.forEach(function(doc) {
                   let grab = document.getElementById(`${id}div`)
                   let review = doc.data();
-                  let reviewContent = `<h5 class="mt-0">${review.username}</h5><p style="text-align: left; margin: 0; max-width: 100%;">${review.review}</p>`
+                  let reviewContent = `<h5 class="mt-0">${review.username}</h5><p class="reviewText">${review.review}</p>`
                   grab.innerHTML += reviewContent
                 });
               })
@@ -70,7 +70,7 @@ function addReview(id, title) {
       review: movieReview,
     })
     let grab = document.getElementById(`${id}div`)
-    let reviewContent = `${userNow}<li>${movieReview}</li>`
+    let reviewContent = `<h5 class="mt-0">${userNow}</h5><p class="reviewText">${movieReview}</p>`
     grab.innerHTML += reviewContent
   }
 }
@@ -97,7 +97,7 @@ if(movieid != '') {
           .then(json => {
             let reviewArray = json.results
             let reviews = reviewArray.map((review) => {
-              return `<h5 class="mt-0">${review.author}</h5><p style="text-align: left; margin: 0; max-width: 100%;">${review.content}</p>`
+              return `<h5 class="mt-0">${review.author}</h5><p class="reviewText">${review.content}</p>`
             })
 
             let reviewsGrouped = reviews.join('')
@@ -105,7 +105,7 @@ if(movieid != '') {
             <div class="media">
             <img src="https://image.tmdb.org/t/p/w500/${result.poster_path}" class="align-self-auto mr-3" alt="noImage" onerror="this.src='timages/noImage.jpg'" style="hieght: 300; width: 200;"/>
             <div class="media-body">
-            <h1 class="mt-0" style="padding-top: 10;">${result.title}</h1>
+            <h1 id="padding10" class="mt-0">${result.title}</h1>
             <p>${reviewsGrouped}</p>
             <div id="${id}div">
             </div>
@@ -124,7 +124,7 @@ if(movieid != '') {
                 querySnapshot.forEach(function(doc) {
                   let grab = document.getElementById(`${id}div`)
                   let review = doc.data();
-                  let reviewContent = `<h5 class="mt-0">${review.username}</h5><p style="text-align: left; margin: 0; max-width: 100%;">${review.review}</p>`
+                  let reviewContent = `<h5 class="mt-0">${review.username}</h5><p class="reviewText">${review.review}</p>`
                   grab.innerHTML += reviewContent
                 });
               })

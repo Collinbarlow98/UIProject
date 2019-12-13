@@ -46,7 +46,6 @@ registerForm.addEventListener('click', (e) => {
 
   // sign up the user
   auth.createUserWithEmailAndPassword(email,password).then(cred =>{
-    console.log(cred.user.email)
   })
 })
 
@@ -71,7 +70,6 @@ loginForm.addEventListener('click', (e) => {
 
   // sign up the user
   auth.signInWithEmailAndPassword(email,password).then(cred =>{
-    console.log(cred.user.email)
   })
 })
 

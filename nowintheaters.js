@@ -6,7 +6,7 @@ fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=ddcb97784f13102b72
     let results = json.results
     let nowplaying = results.map((result) => {
       let poster = result.poster_path
-      return `<a class="tile" href="reviews.html#${result.title}">
+      return `<a id="margin25" class="tile" href="reviews.html#${result.title}">
                 <div class="tile__media">
                   <img class="tile__img_nowplaying" src="https://image.tmdb.org/t/p/w500/${result.poster_path}" alt="No Image" onerror="this.src='timages/noImage.jpg'">
                 </div>
