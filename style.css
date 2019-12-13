@@ -13,6 +13,36 @@ body{
     padding: 0px;
 }
 
+
+.modal-header{
+  background-color: #000000;
+  color: #ecf0f1;
+}
+
+.modal-body{
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+.modal-footer{
+  background-color: black;
+}
+
+.btn{
+  background-color: rgb(0, 0, 0);
+  color:white;
+}
+
+.page-footer{
+  background-color: #1b1b1b;
+}
+
+.footerType{
+  font-size: small;
+  color: rgb(94, 94, 94);
+}
+
 #nv{
   width: 0%!important;
 }
@@ -55,8 +85,9 @@ li{
   }
   h1{
       color: white;
-      padding-top: 60px;
-      margin-left: 80px;
+      font-size: x-large;
+      padding-top: 40px;
+      margin-left: 5px;
   }
   p {
     text-align: center;
@@ -94,7 +125,7 @@ li{
     transition: 450ms transform, 450ms -webkit-transform;
     font-size: 0;
     white-space: nowrap;
-    margin: 104.3125px 80px;
+    margin: 28px;
     padding-bottom: 10px;
   }
   .tile {
@@ -110,102 +141,3 @@ li{
     -webkit-transform-origin: center left;
     transform-origin: center left;
   }
-
-  .tile__img {
-    width: 250px;
-    height: 140.625px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .tile__img_nowplaying {
-    width: 200px;
-    height: 250px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .tile__details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    font-size: 10px;
-    opacity: 0;
-    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-    -webkit-transition: 450ms opacity;
-    transition: 450ms opacity;
-  }
-  .tile__details:after,
-  .tile__details:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: rgb(255, 255, 255);
-  }
-
-  .tile:hover .tile__details {
-    opacity: 1;
-  }
-  .tile__title {
-    position: absolute;
-    bottom: 0;
-    padding: 10px;
-  }
-  .row__inner:hover {
-    -webkit-transform: translate3d(-62.5px, 0, 0);
-            transform: translate3d(-62.5px, 0, 0);
-  }
-  .row__inner:hover .tile {
-    opacity: 0.3;
-  }
-  .row__inner:hover .tile:hover {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    opacity: 1;
-  }
-  .tile:hover ~ .tile {
-    -webkit-transform: translate3d(125px, 0, 0);
-            transform: translate3d(125px, 0, 0);
-  }
-
-.tile__title{
-    color: white;
-}
-
-#searchDiv {
-  display: flex;
-}
-
-#movieid {
-  max-width: 200;
-  margin: 0 10;
-}
-
-#moviesUL {
-  color: white;
-}
-
-.reviewText {
-  text-align: left;
-  margin: 0;
-  max-width: 100%;
-}
-
-.linkReview {
-  display: flex;
-  flex-direction: column;
-  margin: 44;
-  align-items: center;
-}
-
-#padding10 {
-  padding-top: 10;
-}
-
-#margin25 {
-  margin: 0 25;
-}
