@@ -5,7 +5,7 @@ movieSearch.addEventListener('click', () => {
   let movieid = movieids.value
   moviesUL.innerHTML = ''
 
-  fetch(`https://api.themoviedb.org/3/search/movie?api_key=ddcb97784f13102b72af6aa3e89493b4&language=en-US&query=${movieid}&page=1&include_adult=true`)
+  fetch(`https://api.themoviedb.org/3/search/movie?api_key=ddcb97784f13102b72af6aa3e89493b4&language=en-US&query=${movieid}&page=1&include_adult=false`)
     .then((response) => {
       return response.json()
     })
@@ -37,7 +37,7 @@ movieSearch.addEventListener('click', () => {
             </div>
             </div>`
             let submitReviews = `<div class="form-group mx-sm-3 mb-2" style="display: flex; align-items: baseline; margin: 10 0;">
-            <div style="width: 120;">Submit Review</div>
+            <div style="width: 275;">Submit Review or Edit Review</div>
             <input type="text" class="form-control" id='${id}' placeholder="Enter Review" style="margin: 0 10;">
             <button id="movieSearch" onClick='addReview(${id}, "${title}")' type="submit" class="btn btn-primary mb-2">
             Submit
@@ -64,7 +64,7 @@ function addReview(id, title) {
   let input = document.getElementById(`${id}`)
   let movieReview = input.value
   if(movieReview != null) {
-    db.collection(`${id}`).doc().set({
+    db.collection(`${id}`).doc(userNow).set({
       username: userNow,
       title: title,
       review: movieReview,
@@ -80,7 +80,7 @@ function linkedFromOtherPage() {
   let movieid = movieTitle;
   moviesUL.innerHTML = ''
 if(movieid != '') {
-  fetch(`https://api.themoviedb.org/3/search/movie?api_key=ddcb97784f13102b72af6aa3e89493b4&language=en-US&query=${movieid}&page=1&include_adult=true`)
+  fetch(`https://api.themoviedb.org/3/search/movie?api_key=ddcb97784f13102b72af6aa3e89493b4&language=en-US&query=${movieid}&page=1&include_adult=false`)
     .then((response) => {
       return response.json()
     })

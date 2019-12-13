@@ -146,20 +146,6 @@ li{
     left: 50%;
     display: rgb(255, 255, 255);
   }
-  .tile__details:after {
-    margin-top: -25px;
-    margin-left: -25px;
-    width: 50px;
-    height: 50px;
-    border: 3px solid #ecf0f1;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: 1;
-  }
-
-
 
   .tile:hover .tile__details {
     opacity: 1;
