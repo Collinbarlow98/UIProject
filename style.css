@@ -13,6 +13,7 @@ body{
     padding: 0px;
 }
 
+
 .modal-header{
   background-color: #000000;
   color: #ecf0f1;
@@ -41,9 +42,6 @@ body{
   font-size: small;
   color: rgb(94, 94, 94);
 }
-
-
-
 
 #nv{
   width: 0%!important;
@@ -179,9 +177,6 @@ li{
     left: 50%;
     display: rgb(255, 255, 255);
   }
-
-
-
 
   .tile:hover .tile__details {
     opacity: 1;
