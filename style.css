@@ -9,7 +9,44 @@ body{
 
 .navbar{
     background-color: #000000;
+    margin: 0px;
     padding: 0px;
+}
+
+.modal-header{
+  background-color: #000000;
+  color: #ecf0f1;
+}
+
+.modal-body{
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+.modal-footer{
+  background-color: black;
+}
+
+.btn{
+  background-color: rgb(0, 0, 0);
+  color:white;
+}
+
+.page-footer{
+  background-color: #1b1b1b;
+}
+
+.footerType{
+  font-size: small;
+  color: rgb(94, 94, 94);
+}
+
+
+
+
+#nv{
+  width: 0%!important;
 }
 #brand{
     color: rgb(255, 0, 0);
@@ -50,7 +87,9 @@ li{
   }
   h1{
       color: white;
-      padding-top: 60px;
+      font-size: x-large;
+      padding-top: 40px;
+      margin-left: 5px;
   }
   p {
     text-align: center;
@@ -80,6 +119,7 @@ li{
     overflow: auto;
     width: 100%;
   }
+
   .row__inner {
     -webkit-transition: 450ms -webkit-transform;
     transition: 450ms -webkit-transform;
@@ -87,28 +127,37 @@ li{
     transition: 450ms transform, 450ms -webkit-transform;
     font-size: 0;
     white-space: nowrap;
-    margin: 70.3125px 0;
+    margin: 28px;
     padding-bottom: 10px;
   }
   .tile {
     position: relative;
     display: inline-block;
-    width: 250px;
-    height: 140.625px;
+    width: auto;
+    height: auto;
     margin-right: 10px;
     font-size: 20px;
     cursor: pointer;
     -webkit-transition: 450ms all;
     transition: 450ms all;
     -webkit-transform-origin: center left;
-            transform-origin: center left;
+    transform-origin: center left;
   }
+
   .tile__img {
     width: 250px;
     height: 140.625px;
     -o-object-fit: cover;
        object-fit: cover;
   }
+
+  .tile__img_nowplaying {
+    width: 200px;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
   .tile__details {
     position: absolute;
     bottom: 0;
@@ -130,20 +179,9 @@ li{
     left: 50%;
     display: rgb(255, 255, 255);
   }
-  .tile__details:after {
-    margin-top: -25px;
-    margin-left: -25px;
-    width: 50px;
-    height: 50px;
-    border: 3px solid #ecf0f1;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: 1;
-  }
 
-  
+
+
 
   .tile:hover .tile__details {
     opacity: 1;
@@ -174,3 +212,36 @@ li{
     color: white;
 }
 
+#searchDiv {
+  display: flex;
+}
+
+#movieid {
+  max-width: 200;
+  margin: 0 10;
+}
+
+#moviesUL {
+  color: white;
+}
+
+.reviewText {
+  text-align: left;
+  margin: 0;
+  max-width: 100%;
+}
+
+.linkReview {
+  display: flex;
+  flex-direction: column;
+  margin: 44;
+  align-items: center;
+}
+
+#padding10 {
+  padding-top: 10;
+}
+
+#margin25 {
+  margin: 0 25;
+}
