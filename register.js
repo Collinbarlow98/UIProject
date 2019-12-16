@@ -16,15 +16,6 @@ let movieTitle = document.getElementById("movieTitle")
 let movieReview = document.getElementById("movieReview")
 let submitButton = document.getElementById("submitButton")
 
-//submitButton.addEventListener('click', (e) =>{
-
-  //e.preventDefault()
-
-  //db.collection('').add({
-    //title: movieTitle.value,
-    //review: movieReview.value
-  //})
-//})
 // register
 let registerEmail = document.getElementById("register-email")
 let registerPassword = document.getElementById("register-password")
@@ -34,13 +25,10 @@ let registerForm = document.getElementById("registerButton")
 let logoutButton = document.getElementById("signoutButton")
 let loginForm = document.getElementById('loginButton')
 
-
 registerForm.addEventListener('click', (e) => {
-
   e.preventDefault();
 
   // get user info
-
   const email = registerEmail.value;
   const password = registerPassword.value;
 
@@ -53,18 +41,14 @@ registerForm.addEventListener('click', (e) => {
 logoutButton.addEventListener('click' , (e) =>{
   e.preventDefault();
   auth.signOut().then(() =>{
-
   })
 })
 
 //log in user
-
 loginForm.addEventListener('click', (e) => {
-
   e.preventDefault();
 
   // get user info
-
   const email = loginEmail.value;
   const password = loginPassword.value;
 
@@ -74,7 +58,6 @@ loginForm.addEventListener('click', (e) => {
 })
 
 // ui identifier
-
 const loginLink = document.querySelectorAll(".login")
 const logoutlink = document.querySelectorAll(".logout")
 
@@ -86,5 +69,4 @@ const setupUI = (user =>{
     loginLink.forEach(item => item.style.display = 'none')
     logoutlink.forEach(item => item.style.display = 'block')
   }
-
 })
